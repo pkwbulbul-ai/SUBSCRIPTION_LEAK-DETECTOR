@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subscription Leak Detector</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="hero">
+            <div class="logo">💳</div>
+
+            <h1>Subscription Leak Detector</h1>
+
+            <p>
+                Find hidden subscriptions. Stop silent renewals.
+                <strong>Save your money.</strong>
+            </p>
+        </header>
+
+
+        <!-- Dashboard -->
+
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <span>💰</span>
+                <div>
+                    <small>Monthly Spend</small>
+                    <h2 id="dashboardMonthly">₹0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <span>📅</span>
+                <div>
+                    <small>Yearly Spend</small>
+                    <h2 id="dashboardYearly">₹0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card saving">
+                <span>💡</span>
+                <div>
+                    <small>Potential Saving</small>
+                    <h2 id="dashboardSaving">₹0</h2>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Add Subscription -->
+
+        <section class="add-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>➕ Add Subscription</h2>
+                    <p>Keep all your subscriptions in one place.</p>
+                </div>
+            </div>
+
+
+            <form>
+
+                <label for="name">Subscription Name</label>
+
+                <input type="text" id="name" placeholder="Example: Netflix">
+
+
+                <label for="price">Price</label>
+
+                <input type="number" id="price" placeholder="Example: 649">
+
+
+                <label for="planType">Plan Type</label>
+
+                <select id="planType">
+
+                    <option value="subscription">
+                        Regular Subscription
+                    </option>
+
+                    <option value="trial">
+                        Free Trial
+                    </option>
+
+                </select>
+
+
+                <label for="billingCycle">Billing Cycle</label>
+
+                <select id="billingCycle">
+
+                    <option value="monthly">
+                        Monthly
+                    </option>
+
+                    <option value="yearly">
+                        Yearly
+                    </option>
+
+                </select>
+
+
+                <label for="renewalDate">
+                    Next Renewal / Trial End Date
+                </label>
+
+                <input type="date" id="renewalDate">
+
+
+                <button type="submit">
+                    <span>＋</span>
+                    Add Subscription
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Subscription List -->
+
+        <section class="subscriptions-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>📋 My Subscriptions</h2>
+                    <p>Track your active plans and upcoming renewals.</p>
+                </div>
+            </div>
+
+            <div id="subscriptionList"></div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
